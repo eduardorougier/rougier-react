@@ -15,13 +15,19 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 150px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.barrita {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 150px;
 }
 
 .App-link {
