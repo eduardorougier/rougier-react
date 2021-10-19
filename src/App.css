@@ -26,8 +26,23 @@
 
 .barrita {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 150px;
+}
+
+.carrito {
+  width: 100px;
+  height: 100px;
+}
+
+.carrito:hover {
+  height: 105px;
+  width: 105px;
+}
+
+.tituloSaludo {
+  color: blue;
+
 }
 
 .App-link {

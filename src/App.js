@@ -1,5 +1,6 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import { ItemListContainer } from './components/IItemListContainer';
 import NavBar from './components/NavBar';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <NavBar />
+        
         {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -20,6 +22,7 @@ function App() {
           Learn React
         </a> */}
       </header>
+      <ItemListContainer greetings="Gracias por usar este carrito..."/>
     </div>
   );
 }
