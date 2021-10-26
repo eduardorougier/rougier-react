@@ -1,6 +1,8 @@
 // import logo from './logo.svg';
 import './App.css';
 import { ItemListContainer } from './components/IItemListContainer';
+import ItemCount from './components/ItemCount';
+
 import NavBar from './components/NavBar';
 
 function App() {
@@ -22,7 +24,8 @@ function App() {
           Learn React
         </a> */}
       </header>
-      <ItemListContainer greetings="Gracias por usar este carrito..."/>
+      <ItemListContainer greetings="Gracias por usar este carrito... AMEO"/>
+      <ItemCount inicio={1} stock={10}/>
     </div>
   );
 }
