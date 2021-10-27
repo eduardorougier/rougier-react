@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-function ItemCount ({inicio, stock}) {
+function ItemCount ({initial, stock, onAdd }) {
 
-    const [contador, setContador] = useState(inicio);
+    const [contador, setContador] = useState(initial);
 
     const crece = () => {
         if(contador >= stock) {
@@ -14,16 +14,12 @@ function ItemCount ({inicio, stock}) {
     }
 
     const decrece = () => {
-        if(contador <= inicio) {
-            alert ("No podés comprar menos de " + inicio + " producto!")
+        if(contador <= initial) {
+            alert ("No podés comprar menos de " + initial + " producto!")
         } else {
             setContador(contador - 1) 
         }
         
-    }
-
-    const comprar = () => {
-        alert ("Gracias por tu compra")
     }
 
     return (
@@ -32,7 +28,7 @@ function ItemCount ({inicio, stock}) {
             <h2>{contador}</h2>
             <button onClick={crece}>+</button>
             <br />
-            <button onClick={comprar}>COMPRAR</button>
+            <button onClick={onAdd}>COMPRAR</button>
         </div>
     )
 

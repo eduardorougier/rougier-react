@@ -6,6 +6,11 @@ import ItemCount from './components/ItemCount';
 import NavBar from './components/NavBar';
 
 function App() {
+  
+  const comprar = () => {
+    alert ("Gracias por tu compra")
+}
+
   return (
     <div className="App">
       <header className="App-header">
@@ -25,7 +30,7 @@ function App() {
         </a> */}
       </header>
       <ItemListContainer greetings="Gracias por usar este carrito... AMEO"/>
-      <ItemCount inicio={1} stock={10}/>
+      <ItemCount initial={1} stock={10} onAdd={comprar}/>
     </div>
   );
 }
