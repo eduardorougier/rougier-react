@@ -1,15 +1,12 @@
 // import logo from './logo.svg';
 import './App.css';
 import { ItemListContainer } from './components/IItemListContainer';
-import ItemCount from './components/ItemCount';
 
 import NavBar from './components/NavBar';
 
 function App() {
   
-  const comprar = () => {
-    alert ("Gracias por tu compra")
-}
+ 
 
   return (
     <div className="App">
@@ -29,8 +26,13 @@ function App() {
           Learn React
         </a> */}
       </header>
-      <ItemListContainer greetings="Gracias por usar este carrito... AMEO"/>
-      <ItemCount initial={1} stock={10} onAdd={comprar}/>
+      
+      <main>
+      <ItemListContainer greetings="Gracias por usar este carrito..."/>
+      </main>
+      
+      
+      
     </div>
   );
 }

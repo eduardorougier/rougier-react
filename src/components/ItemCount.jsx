@@ -28,7 +28,7 @@ function ItemCount ({initial, stock, onAdd }) {
             <h2>{contador}</h2>
             <button onClick={crece}>+</button>
             <br />
-            <button onClick={onAdd}>COMPRAR</button>
+            <button onClick={onAdd}>Añadir al carrito</button>
         </div>
     )
 
