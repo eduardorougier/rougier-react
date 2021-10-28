@@ -30,13 +30,13 @@ const ItemList = () => {
             { loading ? <h1>Cargando...</h1> :
                 product.map(prod => <div key={prod.id} className="tarjeta">
                                         <div>
-                                            {prod.name}
+                                            <h3>{prod.name}</h3>
                                         </div>
                                         
                                         <div>
                                             <img src={prod.foto} alt="" width="200px"/>
                                             <br />
-                                            {prod.price}
+                                            <h3>${prod.price}</h3>
                                         </div>
                                         
                                         <div>
@@ -45,10 +45,6 @@ const ItemList = () => {
 
                                         <ItemCount initial={1} stock={10} onAdd={comprar}/>
                                         
-                                        <br />
-                                        <br />
-                                        <br />
-                                        <br />
                                     </div> 
                                     
                                     

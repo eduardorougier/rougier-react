@@ -92,3 +92,15 @@
   justify-content: center;
 }
 
+.botonera {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 5px;
+  padding: 10px 20%;
+}
+
+.botonera h2 {
+  margin: 0;
+  padding: 0;
+}

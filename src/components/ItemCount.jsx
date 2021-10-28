@@ -23,7 +23,7 @@ function ItemCount ({initial, stock, onAdd }) {
     }
 
     return (
-        <div>
+        <div className="botonera">
             <button onClick={decrece}>-</button>
             <h2>{contador}</h2>
             <button onClick={crece}>+</button>
