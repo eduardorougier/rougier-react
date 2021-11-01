@@ -1,11 +1,14 @@
+
+
 import { useEffect } from "react";
 import { useState } from "react";
-import getFetch from "./Item";
-import ItemCount from "./ItemCount";
+import getFetch from "./getFetch";
+import Item from "./Item"
 
 
 
-const ItemList = () => {
+
+const ItemList = (edu) => {
     const [product, setProduct] = useState([])
     const [loading, setLoading] = useState(true)
 
@@ -20,35 +23,14 @@ const ItemList = () => {
     },[])
 
     console.log(product)
-    
-    const comprar = () => {
-        alert ("Gracias por tu compra")
-    }
 
     return (
         <>
             { loading ? <h1>Cargando...</h1> :
-                product.map(prod => <div key={prod.id} className="tarjeta">
-                                        <div>
-                                            <h3>{prod.name}</h3>
-                                        </div>
-                                        
-                                        <div>
-                                            <img src={prod.foto} alt="" width="200px"/>
-                                            <br />
-                                            <h3>${prod.price}</h3>
-                                        </div>
-                                        
-                                        <div>
-                                            <button>Detalle del producto</button>
-                                        </div>
-
-                                        <ItemCount initial={1} stock={10} onAdd={comprar}/>
-                                        
-                                    </div> 
+                product.map((prod) => <Item prod={prod} />)
                                     
                                     
-                             )
+                             
             }
         </>
     )
