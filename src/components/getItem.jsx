@@ -9,24 +9,3 @@ const getItem = new Promise((resolve, rej) => {
 
 export default getItem 
 
-// const productosDetalles = [
-//     {id: 1, name:"Producto1", descripcion:"bla bla bla bla bla bla bla bla bla bla bla", price:150},
-//     {id: 2, name:"Producto2", descripcion:"bla bla bla bla bla bla bla bla bla bla bla", price:250},
-//     {id: 3, name:"Producto3", descripcion:"bla bla bla bla bla bla bla bla bla bla bla", price:100},
-//     {id: 4, name:"Producto4", descripcion:"bla bla bla bla bla bla bla bla bla bla bla", price:150},
-//     {id: 5, name:"Producto5", descripcion:"bla bla bla bla bla bla bla bla bla bla bla", price:150},
-//     {id: 6, name:"Producto6", descripcion:"bla bla bla bla bla bla bla bla bla bla bla", price:15},
-//     {id: 7, name:"Producto7", descripcion:"bla bla bla bla bla bla bla bla bla bla bla", price:50},
-//     {id: 8, name:"Producto8", descripcion:"bla bla bla bla bla bla bla bla bla bla bla", price:350},
-//     {id: 9, name:"Producto9", descripcion:"bla bla bla bla bla bla bla bla bla bla bla", price:500},
-//     {id: 10, name:"Producto10", descripcion:"bla bla bla bla bla bla bla bla bla bla bla", price:100}
-// ]
-
-// const getItem = new Promise((resolve, reject) => {
-
-//     setTimeout(() => {
-//         resolve(productosDetalles)
-//     }, 2000);
-// })
-
-// export default getItem
