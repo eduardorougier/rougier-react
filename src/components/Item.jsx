@@ -1,23 +1,23 @@
 import ItemCount from "./ItemCount";
 
-function Item(edu) {
+function Item(props) {
   
        const comprar = () => {
         alert ("Gracias por tu compra")
     }
   
     return (
-    <div key={edu.id} className="tarjeta">
+    <div key={props.prod.id} className="tarjeta">
       <div>
-        <h3>{edu.name}</h3>
+        <h3>{props.prod.name}</h3>
       </div>
 
       <div>
-        <img src={edu.foto} alt="" width="200px" />
+        <img src={props.prod.foto} alt="" width="200px" />
         <br />
-        <h3>${edu.price}</h3>
+        <h3>${props.prod.price}</h3>
       </div>
-
+      
       <div>
         <button>Detalle del producto</button>
       </div>
