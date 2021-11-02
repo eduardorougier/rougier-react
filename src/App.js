@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import { ItemListContainer } from './components/IItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 import NavBar from './components/NavBar';
 
@@ -29,6 +30,7 @@ function App() {
       
       <main>
       <ItemListContainer greetings="Gracias por usar este carrito..."/>
+      <ItemDetailContainer />
       </main>
       
       

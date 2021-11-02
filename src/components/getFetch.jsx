@@ -7,7 +7,8 @@ const productos = [
     {id: 6, name:"Producto6", foto:"https://www.detallesmasbonitaqueninguna.com/server/Portal_0015715/img/products/no_image_xxl.jpg", price:15},
     {id: 7, name:"Producto7", foto:"https://www.detallesmasbonitaqueninguna.com/server/Portal_0015715/img/products/no_image_xxl.jpg", price:50},
     {id: 8, name:"Producto8", foto:"https://www.detallesmasbonitaqueninguna.com/server/Portal_0015715/img/products/no_image_xxl.jpg", price:350},
-    {id: 9, name:"Producto9", foto:"https://www.detallesmasbonitaqueninguna.com/server/Portal_0015715/img/products/no_image_xxl.jpg", price:500}
+    {id: 9, name:"Producto9", foto:"https://www.detallesmasbonitaqueninguna.com/server/Portal_0015715/img/products/no_image_xxl.jpg", price:500},
+    {id: 10, name:"Producto10", foto:"https://www.detallesmasbonitaqueninguna.com/server/Portal_0015715/img/products/no_image_xxl.jpg", price:100}
 ]
 
 const getFetch = new Promise((resolve, reject)=>{
@@ -19,3 +20,5 @@ const getFetch = new Promise((resolve, reject)=>{
 
 
 export default getFetch
+
+

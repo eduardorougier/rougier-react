@@ -7,6 +7,7 @@ export const ItemListContainer = ({greetings="Falta saludo"}) => {
                 <h3 className="tituloSaludo">{greetings}</h3>
                 <div className="contenedorTarjetas">
                     <ItemList />
+                    
                 </div>
             </div>
             
