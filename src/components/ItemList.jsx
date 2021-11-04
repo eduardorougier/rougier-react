@@ -1,39 +1,42 @@
-
-
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom';
 import getFetch from "./getFetch";
-import Item from "./Item"
+import Item from "./Item";
 
+const ItemList = () => {
 
-
-
-const ItemList = (edu) => {
     const [product, setProduct] = useState([])
-    const [loading, setLoading] = useState(true)
+    const { id } = useParams()
+
 
     useEffect(() => {
-        getFetch
-        .then( res => {
-            console.log('llamada a api')
-            setProduct(res)
-        })
-        .catch(err => console.log(err))
-        .finally(() => setLoading(false))
-    },[])
+        if (id) {
+            getFetch
+                .then((res) => {
+                    setProduct(res.filter(prod => prod.category=== id))
+                })
+                .finally(() => console.log('Esto se ejecuta si o si'))
 
-    console.log(product)
+            console.log(id)
+
+        } else {
+            getFetch
+                .then((res) => {
+                    setProduct(res)
+                })
+                .finally(() => console.log('Esto se ejecuta si o si'))
+
+            console.log(id)
+
+        }
+
+    }, [id])
 
     return (
         <>
-            { loading ? <h1>Cargando...</h1> :
-                product.map((prod) => <Item prod={prod} />)
-                                    
-                                    
-                             
-            }
+            {product.map((prod) => <Item prod={prod} />)}
         </>
     )
 }
 
-export default ItemList
+export default ItemList;

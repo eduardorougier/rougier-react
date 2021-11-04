@@ -8,4 +8,3 @@ const getItem = new Promise((resolve, rej) => {
 })
 
 export default getItem 
-

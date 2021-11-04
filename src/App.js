@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import './App.css';
 import { ItemListContainer } from './components/IItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
@@ -14,26 +13,22 @@ function App() {
       <header className="App-header">
         <NavBar />
         
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
       </header>
       
       <main>
-      <ItemListContainer greetings="Gracias por usar este carrito..."/>
-      <ItemDetailContainer />
-      </main>
-      
-      
+      <Router>
+        
+        <Switch>
+          <Route exact path="/">
+            <ItemListContainer greetings="Gracias por usar este carrito..."/>
+          </Route>
+          
+          <Route path="/detalle" component={ItemDetailContainer} />
+          <Route exact path='/cart' component={Cart} />
+        </Switch>
+      </Router>
+
+      </main>    
       
     </div>
   );

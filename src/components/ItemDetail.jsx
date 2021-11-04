@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const ItemDetail = (prod) => {
@@ -21,23 +20,3 @@ const ItemDetail = (prod) => {
 }
 
 export default ItemDetail 
-
-// import React from 'react' 
-
-// const ItemDetail = (props) => {
-//     return (
-//         <div>
-//              <label>
-//                 <h2>Detalles: </h2>{props.prod.name}
-//             </label>
-//             <label>
-//                 <h3>Precio</h3>{props.prod.price}
-//             </label>
-//             <label>
-//                 {props.prod.descripcion}
-//             </label>
-//         </div>
-//     )
-// }
-
-// export default ItemDetail
