@@ -5,8 +5,8 @@ function Item(prod) {
     return (
         <div key={prod.prod.id} className="card">
             <div className="card-header">
-                {prod.prod.title}
-                {prod.prod.category}
+                <h2 className="titulo-card">{prod.prod.title}</h2>
+                <h3>{prod.prod.category}</h3>
             </div>
 
             <div className="card-body">
@@ -16,9 +16,7 @@ function Item(prod) {
 
             <div className="card-footer">
                 <Link to={`/item/${prod.prod.id}`}>
-                <button className="btn btn-outline-primary btn-block">
-                    Detalle del producto
-                </button>
+                DETALLE DEL PRODUCTO
                 </Link>
             </div>
             <ItemCount  stock={5} initial={1}/>
@@ -26,5 +24,4 @@ function Item(prod) {
     );
 }
 
-export default Item;
 export default Item;

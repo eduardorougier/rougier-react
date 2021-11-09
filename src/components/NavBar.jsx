@@ -1,25 +1,23 @@
-import { CartWidget } from "./CartWidget"
+import CartWidget from "./CartWidget.js";
+import {Link} from 'react-router-dom';
 
-const NavBar = () => {
+
+//Escribo la función NavBar
+function NavBar() {
     return (
-        <div>
-            <div className="barrita">
-                <div className="logo">
-                    <h1>iCommerce</h1>
-                </div>
-                <div className="menu">
-                    <ul>
-                        <li><a href="www.mercadolibre.com.ar">Mercado Libre</a></li>
-                        <li><a href="www.facebook.com.ar">Facebook Market</a></li>
-                        <li><a href="www.amazon.com">Amazon</a></li>
-                    </ul>
-                </div>
-                <CartWidget />
-            </div>
-            
-        </div>
-        
-    )
-}
+        <nav>
+            <ul>
+                <li className="btnNBItem"><Link to='/'>Brand</Link></li>
+                <li className="btnNBItem"><Link to='/'>Inicio</Link></li>
+                <li className="btnNBItem"><Link to='/category/Cat1'>Cat1</Link></li>
+                <li className="btnNBItem"><Link to='/category/Cat2'>Cat2</Link></li>
+                <li className="btnNBItem"><Link to='/cart'><CartWidget/></Link></li>
 
-export default NavBar
+            </ul>
+
+        </nav>
+    );
+}
+//Exportamos la Función para poder usarla
+export default NavBar;
+

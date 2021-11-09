@@ -6,6 +6,7 @@ import Item from "./Item";
 const ItemList = () => {
 
     const [product, setProduct] = useState([])
+    const [loading, setLoading] = useState(true)
     const { id } = useParams()
 
 
@@ -24,7 +25,7 @@ const ItemList = () => {
                 .then((res) => {
                     setProduct(res)
                 })
-                .finally(() => console.log('Esto se ejecuta si o si'))
+                .finally(() => setLoading(false))
 
             console.log(id)
 
@@ -34,9 +35,18 @@ const ItemList = () => {
 
     return (
         <>
-            {product.map((prod) => <Item prod={prod} />)}
+        {loading ? <h1>Cargando...</h1>:
+        product.map((prod) => <Item prod={prod} />)
+        
+        }
+            
         </>
     )
 }
 
 export default ItemList;
+
+
+
+
+

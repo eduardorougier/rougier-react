@@ -1,4 +1,4 @@
-import Cart from "../Cart";
+
 
 function CartWidget() {
     return (

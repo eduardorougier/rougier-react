@@ -1,15 +1,13 @@
+
 import React from "react";
 
 const ItemDetail = (prod) => {
 
     return(
-        <div>
+        <div key={prod.prod.id} className="detalle-item">
             <h2>Detalle del Item: {prod.prod.title}</h2>
             <div>
                 <img src={prod.prod.foto} alt='imagen' />
-            </div>
-            <div>
-                ${prod.prod.precio}
             </div>
             <div>
                 <p>{prod.prod.description}</p>
@@ -19,4 +17,4 @@ const ItemDetail = (prod) => {
     )
 }
 
-export default ItemDetail 
+export default ItemDetail
