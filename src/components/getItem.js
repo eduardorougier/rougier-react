@@ -3,7 +3,7 @@ const producto = { id:1, title: 'Producto', foto:'data:image/png;base64,iVBORw0K
 
 //Promesa que resuelve con 2 seg de delay
 const getItem = new Promise((resolve, rej) => {
-    setTimeout( () => {
+    setTimeout(() => {
         resolve(producto);
     }, 2000);
 })

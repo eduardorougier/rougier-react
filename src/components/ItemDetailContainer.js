@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useParams } from "react-router";
 import { useEffect, useState } from "react/cjs/react.development";
@@ -17,7 +16,7 @@ const ItemDetailContainer = () => {
                 console.log('Llamada a api')
                 setProd(res.find(prod => prod.id===id))
             })
-            .finally(() => console.log('Esto se ejecuta en el finally '))
+            .finally(() => console.log('Esto se ejecuta'))
 
         console.log(prod)
         }else {
@@ -26,7 +25,7 @@ const ItemDetailContainer = () => {
                 console.log('Llamada a api')
                 setProd(res)
             })
-            .finally(() => console.log('Esto se ejecuta MAN'))
+            .finally(() => console.log('Esto se ejecuta'))
 
         console.log(prod)
         }
