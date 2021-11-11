@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { useEffect, useState } from "react/cjs/react.development";
 import getItem from "./getItem";
 import ItemDetail from "./ItemDetail";
+import getFetch from "./getFetch";
 
 const ItemDetailContainer = () => {
     const [prod, setProd] = useState({})
@@ -11,30 +12,31 @@ const ItemDetailContainer = () => {
     useEffect(() => {
 
         if (id) {
-            getItem
+            getFetch
             .then((res) => {
                 console.log('Llamada a api')
-                setProd(res.find(prod => prod.id===id))
+                setProd(res.find(prod => parseInt(prod.id)===parseInt(id)))
             })
             .finally(() => console.log('Esto se ejecuta'))
 
         console.log(prod)
-        }else {
-            getItem
-            .then((res) => {
-                console.log('Llamada a api')
-                setProd(res)
-            })
-            .finally(() => console.log('Esto se ejecuta'))
+        // }else {
+        //     getFetch
+        //     .then((res) => {
+        //         console.log('Llamada a api')
+        //         setProd(res)
+        //     })
+        //     .finally(() => console.log('Esto se ejecuta'))
 
-        console.log(prod)
+        // console.log(prod)
         }
     
     },)    
 
     return (
         <>
-        {prod && <ItemDetail prod={prod}/>}
+        {/* {prod && <ItemDetail prod={prod}/>} */}
+        {prod ? <ItemDetail prod={prod}/> : <h1>Hola</h1>}
         </>
     )
 }
