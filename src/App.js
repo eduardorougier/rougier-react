@@ -8,25 +8,28 @@ import './css/ItemDetail.css';
 import ItemListContainer from './components/ItemListContainer';
 import Cart from './components/Cart';
 import ItemDetailContainer from './components/ItemDetailContainer'
+import CartContextProvider from './components/CartContext';
 
 function App() {
   return (
     <div className="App">
 
       {/*  Componentes donde quiero navegar */}
-      <BrowserRouter>
+      <CartContextProvider>
+        <BrowserRouter>
 
-        <NavBar />        
-        {/* Navegar entre los componentes */}
-        <Switch>
-          {/* Route: Crea conección entre componente y la ruta */}
-          <Route exact path='/' component={ItemListContainer} />
-          <Route exact path='/category/:id' component={ItemListContainer} />
-          <Route exact path='/item/:id' component={ItemDetailContainer} />
-          <Route exact path='/cart' component={Cart} />
-        </Switch>
+          <NavBar />        
+          {/* Navegar entre los componentes */}
+          <Switch>
+            {/* Route: Crea conección entre componente y la ruta */}
+            <Route exact path='/' component={ItemListContainer} />
+            <Route exact path='/category/:id' component={ItemListContainer} />
+            <Route exact path='/item/:id' component={ItemDetailContainer} />
+            <Route exact path='/cart' component={Cart} />
+          </Switch>
 
-      </BrowserRouter>
+        </BrowserRouter>
+      </CartContextProvider>
 
     </div>
   );

@@ -20,22 +20,12 @@ const ItemDetailContainer = () => {
             .finally(() => console.log('Esto se ejecuta'))
 
         console.log(prod)
-        // }else {
-        //     getFetch
-        //     .then((res) => {
-        //         console.log('Llamada a api')
-        //         setProd(res)
-        //     })
-        //     .finally(() => console.log('Esto se ejecuta'))
-
-        // console.log(prod)
         }
     
     },)    
 
     return (
         <>
-        {/* {prod && <ItemDetail prod={prod}/>} */}
         {prod ? <ItemDetail prod={prod}/> : <h1>Hola</h1>}
         </>
     )
